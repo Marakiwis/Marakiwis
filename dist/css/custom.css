@@ -1,0 +1,109 @@
+/* NAVBAR */
+.navbar-brand > img {
+	height: 100%;
+}
+.navbar-inverse {
+	margin-top: 5px;
+	border-radius: 6px;
+}
+
+.navbar-form .form-control {
+	width: 75%;
+}
+/* FIN NAVBAR */
+
+/* CUSTOM */
+
+/* FIN CUSTOM */
+
+/* INICIO CARRUSEL */
+.carousel-indicators {
+	bottom: 5px;
+}
+
+.carousel-caption {
+	background-color: rgba(0, 0, 0, 0.5);
+	text-align: left;
+	width: 100%;
+	left: 0;
+	bottom: 0;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+@media (max-width: 767px) {
+	.carousel-caption {
+		display: none;
+	}
+	#carousel-example-generic {
+		margin-top: 50px;
+	}
+	
+	.navbar-form.navbar-left{
+		margin-right: 0px;
+	}
+	
+	.form-group .form-control{
+		display: inline;
+	}
+	
+}
+
+@media (min-width: 768px){
+	
+}
+
+/* FIN CARRUSEL */
+
+/* RESPONSIVE */
+
+/* FIN RESPONSIVE */
+
+/* PRODUCTOS */
+.thumbnail {
+	overflow: hidden;
+	position: inherit;
+}
+
+.label {
+	position: absolute;
+	transform: rotate(-40deg);
+	-webkit-transform: rotate(-40deg);
+	-moz-transform: rotate(-40deg);
+	background-color: #eee;
+	width: 175px;
+	margin-left: -46px;
+	margin-top: 25px;
+}
+
+.label a {
+	font-size: 16px;
+	padding: 8px;
+	margin: 0px;
+	text-decoration: none;
+}
+
+/* FIN PRODUCTOS */
+
+/* ========== FOOTER ========== */
+
+.social a i.fa {
+	font-size: 40px;
+	color: #000;
+	margin: 0 10px;
+	transition: color .5s;
+	-webkit-transition: color .5s;
+	-moz-transition: color .5s;
+}
+
+.social i.fa.fa-facebook-square:hover {
+	color: #3B5998;
+}
+.social i.fa.fa-twitter-square:hover {
+	color: #55ACEE;
+}
+.social i.fa.fa-google-plus-square:hover {
+	color: red;
+}
+
+/* ========== FINAL FOOTER ========== */
