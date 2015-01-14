@@ -17,16 +17,16 @@ require_once "{$base_dir}Config{$ds}Constant.php";
 
 <title>Marakiwis Chile</title>
 
-<link href="/Marakiwis/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="/Marakiwis/dist/css/font-awesome.min.css" rel="stylesheet">
-<link href="/Marakiwis/dist/css/jquery.bxslider.css" rel="stylesheet">
-<link href="/Marakiwis/dist/css/star-rating.min.css" rel="stylesheet">
-<link href="/Marakiwis/dist/css/custom.css" rel="stylesheet">
+<link href="/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="/dist/css/font-awesome.min.css" rel="stylesheet">
+<link href="/dist/css/jquery.bxslider.css" rel="stylesheet">
+<link href="/dist/css/star-rating.min.css" rel="stylesheet">
+<link href="/dist/css/custom.css" rel="stylesheet">
 <link rel="apple-touch-icon" href="/Marakiwis/dist/img/icono.png" />
-<link rel="apple-touch-icon" sizes="57x57" href="/Marakiwis/dist/img/apple/apple-touch-icon-57x57.png" />
-<link rel="apple-touch-icon" sizes="72x72" href="/Marakiwis/dist/img/apple/apple-touch-icon-72x72.png" />
-<link rel="apple-touch-icon" sizes="114x114" href="/Marakiwis/dist/img/apple/apple-touch-icon-114x114.png" />
-<link rel="apple-touch-icon" sizes="144x144" href="/Marakiwis/dist/img/apple/apple-touch-icon-144x144.png" />
+<link rel="apple-touch-icon" sizes="57x57" href="/dist/img/apple/apple-touch-icon-57x57.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="/dist/img/apple/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="/dist/img/apple/apple-touch-icon-114x114.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="/dist/img/apple/apple-touch-icon-144x144.png" />
 
 </head>
 
@@ -46,8 +46,8 @@ require_once "{$base_dir}Config{$ds}Constant.php";
 									class="icon-bar"></span> <span class="icon-bar"></span> <span
 									class="icon-bar"></span>
 							</button>
-							<a class="navbar-brand" href="/Marakiwis"> <img alt="Marakiwis"
-								src="/Marakiwis/dist/img/favicon.png">
+							<a class="navbar-brand" href="/"> <img alt="Marakiwis"
+								src="/dist/img/favicon.png">
 							</a>
 						</div>
 
