@@ -34,7 +34,7 @@ require_once "{$base_dir}Config{$ds}Constant.php";
 
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-md-12">
+			<div class="col-xs-12 col-sm-12 col-md-12">
 				<nav class="navbar navbar-inverse text-center">
 					<div class="container-fluid">
 						<!-- Brand and toggle get grouped for better mobile display -->
