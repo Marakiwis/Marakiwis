@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteRule ^view-woman/([a-zA-Z0-9_-]+)$ view-product.php?id=$1
+ErrorDocument 404 /Marakiwis/no-existe.php
+ErrorDocument 403 /Marakiwis/no-existe.php

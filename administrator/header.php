@@ -2,7 +2,7 @@
 session_start ();
 $ds = DIRECTORY_SEPARATOR;
 $base_dir = realpath ( dirname ( __FILE__ ) . $ds . '..' ) . $ds;
-require_once "{$base_dir}Marakiwis{$ds}DataAccess{$ds}DataAccess.php";
+require_once "{$base_dir}DataAccess{$ds}DataAccess.php";
 require_once "{$base_dir}Config{$ds}Constant.php";
 ?>
 <!DOCTYPE html>

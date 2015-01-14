@@ -64,7 +64,7 @@
 	transform: rotate(-40deg);
 	-webkit-transform: rotate(-40deg);
 	-moz-transform: rotate(-40deg);
-	background-color: red;
+	background-color: #C57878;
 	width: 175px;
 	margin-left: -46px;
 	margin-top: 25px;
@@ -77,6 +77,11 @@
 	text-decoration: none;
 }
 
+.valor:hover{
+	text-decoration: none;
+	color: white;
+}
+
 /* FIN PRODUCTOS */
 
 /* ========== FOOTER ========== */
@@ -84,9 +89,7 @@
 	position: absolute;
 	bottom: 0;
 	width: 100%;
-	/* Set the fixed height of the footer here */
 	height: 10px;
-	/* background-color: #f5f5f5; */
 }
 
 .footer .container-fluid{

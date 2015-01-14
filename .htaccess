@@ -1,0 +1,7 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www.maraquiwis.cl [NC]
+RewriteRule ^(.*)$ http://marakiwis.cl/$1 [L,R=301]
+RewriteRule ^view-woman/([a-zA-Z0-9_-]+)$ view-product.php?id=$1
+RewriteRule ^sitemap.xml$ sitemap.php [L,NC]
+ErrorDocument 404 /Marakiwis/no-existe.php
+ErrorDocument 403 /Marakiwis/no-existe.php

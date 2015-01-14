@@ -35,7 +35,7 @@
 				</form>
 			</div>
 			<div class="modal-footer">
-				<input type="submit" class="btn btn-primary" id="saveChangesEdit"
+				<input type="submit" class="btn btn-primary" id="log"
 					value="Ingresar">
 				<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
 			</div>
@@ -54,7 +54,7 @@
 				<h4 class="modal-title" id="myModalLabel">Registro</h4>
 			</div>
 			<div class="modal-body">
-				<form action="#" name="login" class="text-center">
+				<form action="#" name="registro" class="text-center">
 					<input type="text" class="form-control" placeholder="Usuario"><br>
 					<input type="email" class="form-control" placeholder="Correo"><br>
 					<input type="password" class="form-control"
@@ -67,8 +67,8 @@
 					</div>
 				</form>
 			</div>
-			<div class="modal-footer">
-				<input type="submit" class="btn btn-primary" id="saveChangesEdit"
+			<div class="modal-footer" id="footer-registro">
+				<input type="submit" class="btn btn-primary" id="reg"
 					value="Registrarse">
 				<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
 			</div>

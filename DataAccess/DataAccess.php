@@ -2,7 +2,7 @@
 $ds = DIRECTORY_SEPARATOR;
 $base_dir = realpath ( dirname ( __FILE__ ) . $ds . '..' ) . $ds;
 require_once "{$base_dir}Config{$ds}rb.php";
-R::setup ( "mysql:host=localhost;dbname=gtclient", 'root', '123456' );
+R::setup ( "mysql:host=localhost;dbname=marakiwis", 'root', '123456' );
 class DataAccess {
 	/**
 	 * $nameOfClass Nombre de la clase desde la base de datos

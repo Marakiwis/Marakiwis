@@ -1,0 +1,7 @@
+User-agent: * 
+Disallow: /dist/
+Disallow: /DataBase/
+Disallow: /DataAccess/
+Disallow: /Config/
+
+Sitemap: http://www.marakiwis.cl/sitemap.xml
