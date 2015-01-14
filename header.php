@@ -3,6 +3,7 @@ session_start ();
 $ds = DIRECTORY_SEPARATOR;
 $base_dir = realpath ( dirname ( __FILE__ ) . $ds . '..' ) . $ds;
 require_once "{$base_dir}Marakiwis{$ds}DataAccess{$ds}DataAccess.php";
+require_once "{$base_dir}Config{$ds}Constant.php";
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -18,7 +19,30 @@ require_once "{$base_dir}Marakiwis{$ds}DataAccess{$ds}DataAccess.php";
 
 <link href="/Marakiwis/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="/Marakiwis/dist/css/font-awesome.min.css" rel="stylesheet">
+<link href="/Marakiwis/dist/css/jquery.bxslider.css" rel="stylesheet">
+<link href="/Marakiwis/dist/css/star-rating.min.css" rel="stylesheet">
 <link href="/Marakiwis/dist/css/custom.css" rel="stylesheet">
+<style type="text/css">
+  .bx-wrapper .bx-pager {
+    bottom: -95px;
+  }
+  
+  .bx-wrapper .bx-pager a {
+    border: solid #ccc 1px;
+    display: block;
+    margin: 0 5px;
+    padding: 3px;
+  }
+  
+  .bx-wrapper .bx-pager a:hover,
+  .bx-wrapper .bx-pager a.active {
+    border: solid #5280DD 1px;
+  }
+  
+  .bx-wrapper {
+    margin-bottom: 120px;
+  }
+</style>
 </head>
 
 <body>
@@ -50,14 +74,33 @@ require_once "{$base_dir}Marakiwis{$ds}DataAccess{$ds}DataAccess.php";
 								<li><a href="#">Acción</a></li>
 								<li><a href="#">Acción</a></li>
 							</ul>
-							<ul class="nav navbar-nav navbar-right">
+								<?php if (isset($_SESSION[SESSION_ID])){?>
+								<?php if ($_SESSION[SESSION_ID] === null){?>
+								<ul class="nav navbar-nav navbar-right">
 								<form class="navbar-form navbar-left" role="search">
 									<div class="form-group">
-										<input type="text" class="form-control" placeholder="Buscar">
+										<input type="text" class="form-control" placeholder="Usuario">
+										<input type="text" class="form-control"
+											placeholder="Contrase&ntilde;a">
 									</div>
-									<button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+									<button type="submit" class="btn btn-default">
+										<i class="fa fa-search"></i>
+									</button>
 								</form>
 							</ul>
+								<?php } else {?>
+									<p class="navbar-text navbar-right">Has Ingresado Como <?php echo $_SESSION[SESSION_USUARIO]?></p>
+								<?php }?>
+								<?php } else { ?>
+							<ul class="nav navbar-nav navbar-right">
+								<form class="navbar-form navbar-left">
+								<button type="button" class="btn btn-success" id="ingresar">Ingresar</button>
+								</form>
+								<form class="navbar-form navbar-left">
+								<button type="button" class="btn btn-info" id="registrar">Registrarse</button>
+								</form>
+							</ul>
+								<?php }?>
 						</div>
 						<!-- /.navbar-collapse -->
 					</div>
