@@ -13,6 +13,7 @@ $(document).ready(function() {
 });
 
 $('.bxslider').bxSlider({
+	mode: 'fade',
 	pagerCustom : '#bx-pager'
 });
 
