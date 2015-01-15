@@ -55,16 +55,16 @@
 			</div>
 			<div class="modal-body">
 				<form action="#" name="registro" class="text-center">
-					<input type="text" class="form-control" placeholder="Usuario"><br>
-					<input type="email" class="form-control" placeholder="Correo"><br>
-					<input type="password" class="form-control"
-						placeholder="Contrase&ntilde;a"><br> <input type="password"
-						class="form-control" placeholder="Repita Contrase&ntilde;a"><br>
+					<input type="text" name="user" class="form-control" placeholder="Usuario"><br>
+					<input type="email" name="email" class="form-control" placeholder="Correo"><br>
+					<input type="password" class="form-control" name="password" placeholder="Contrase&ntilde;a"><br> 
+					<input type="password" class="form-control" placeholder="Repita Contrase&ntilde;a"><br>
 					<div class="checkbox text-center">
-						<label> <input type="checkbox">Acepto los terminos y condiciones
-							del sitio
+						<label>
+							<input type="checkbox">Acepto los terminos y condiciones del sitio
 						</label>
 					</div>
+					<input type="hidden" name="opt" value="register">
 				</form>
 			</div>
 			<div class="modal-footer" id="footer-registro">

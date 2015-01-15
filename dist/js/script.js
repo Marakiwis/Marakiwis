@@ -27,7 +27,7 @@ $('#reg').click(function(event) {
 function grabar(formulario, msj, nombreFormulario) {
 	$
 			.ajax({
-				url : "/Marakiwis/Controller.php",
+				url : "/DataAccess/Controller.php",
 				type : "post",
 				data : $('form[name=' + formulario + ']').serialize(),
 				success : function(estado) {

@@ -10,7 +10,8 @@ require_once "{$base_dir}Config{$ds}Constant.php";
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="description" content="">
 <meta name="author" content="Marakiwis">
 <link rel="icon" href="/Marakiwis/dist/img/favicon.png">
@@ -23,10 +24,14 @@ require_once "{$base_dir}Config{$ds}Constant.php";
 <link href="/dist/css/star-rating.min.css" rel="stylesheet">
 <link href="/dist/css/custom.css" rel="stylesheet">
 <link rel="apple-touch-icon" href="/dist/img/icono.png" />
-<link rel="apple-touch-icon" sizes="57x57" href="/dist/img/apple/apple-touch-icon-57x57.png" />
-<link rel="apple-touch-icon" sizes="72x72" href="/dist/img/apple/apple-touch-icon-72x72.png" />
-<link rel="apple-touch-icon" sizes="114x114" href="/dist/img/apple/apple-touch-icon-114x114.png" />
-<link rel="apple-touch-icon" sizes="144x144" href="/dist/img/apple/apple-touch-icon-144x144.png" />
+<link rel="apple-touch-icon" sizes="57x57"
+	href="/dist/img/apple/apple-touch-icon-57x57.png" />
+<link rel="apple-touch-icon" sizes="72x72"
+	href="/dist/img/apple/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="114x114"
+	href="/dist/img/apple/apple-touch-icon-114x114.png" />
+<link rel="apple-touch-icon" sizes="144x144"
+	href="/dist/img/apple/apple-touch-icon-144x144.png" />
 
 </head>
 
@@ -59,9 +64,12 @@ require_once "{$base_dir}Config{$ds}Constant.php";
 								<li><a href="#">Acción</a></li>
 								<li><a href="#">Acción</a></li>
 							</ul>
-								<?php if (isset($_SESSION[SESSION_ID])){?>
-								<?php if ($_SESSION[SESSION_ID] === null){?>
-								<ul class="nav navbar-nav navbar-right">
+								<?php
+								
+							if (isset ( $_SESSION [SESSION_ID] )) {
+									if ($_SESSION [SESSION_ID] === null) {
+										?>
+								<ul class="nav navbar-nav navbar-right" id="menuderecho">
 								<form class="navbar-form navbar-left" role="search">
 									<div class="form-group">
 										<input type="text" class="form-control" placeholder="Usuario">
@@ -79,10 +87,10 @@ require_once "{$base_dir}Config{$ds}Constant.php";
 								<?php } else { ?>
 							<ul class="nav navbar-nav navbar-right">
 								<form class="navbar-form navbar-left">
-								<button type="button" class="btn btn-success" id="ingresar">Ingresar</button>
+									<button type="button" class="btn btn-success" id="ingresar">Ingresar</button>
 								</form>
 								<form class="navbar-form navbar-left">
-								<button type="button" class="btn btn-info" id="registrar">Registrarse</button>
+									<button type="button" class="btn btn-info" id="registrar">Registrarse</button>
 								</form>
 							</ul>
 								<?php }?>

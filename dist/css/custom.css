@@ -77,11 +77,23 @@
 	text-decoration: none;
 }
 
-.valor:hover{
+.valor:hover {
 	text-decoration: none;
 	color: white;
 }
 
+.bx-wrapper {
+	margin: 0 auto 20px;
+}
+
+#bx-pager img {
+	max-width: 50px;
+	max-height: 50px;
+}
+
+#bx-pager a {
+	display: inline-block;
+}
 /* FIN PRODUCTOS */
 
 /* ========== FOOTER ========== */
@@ -92,7 +104,7 @@
 	height: 10px;
 }
 
-.footer .container-fluid{
+.footer .container-fluid {
 	width: auto;
 	max-width: 680px;
 	padding: 0 15px;
