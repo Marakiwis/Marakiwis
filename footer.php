@@ -27,16 +27,16 @@
 				</button>
 				<h4 class="modal-title" id="myModalLabel">Inicio Sesión</h4>
 			</div>
+			<div id="msgLogin"></div>
 			<div class="modal-body">
 				<form action="#" name="login">
-					<input type="text" class="form-control" placeholder="Usuario"><br>
-					<input type="password" class="form-control"
-						placeholder="Contrase&ntilde;a">
+					<input type="text" class="form-control" placeholder="Usuario" name="user"><br>
+					<input type="password" class="form-control" placeholder="Contrase&ntilde;a" name="pass">
+					<input type="hidden" name="opt" value="login">
 				</form>
 			</div>
 			<div class="modal-footer">
-				<input type="submit" class="btn btn-primary" id="log"
-					value="Ingresar">
+				<input type="submit" class="btn btn-primary" id="log" value="Ingresar">
 				<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
 			</div>
 		</div>
@@ -53,25 +53,25 @@
 				</button>
 				<h4 class="modal-title" id="myModalLabel">Registro</h4>
 			</div>
-			<div class="modal-body">
-				<form action="#" name="registro" class="text-center">
-					<input type="text" name="user" class="form-control" placeholder="Usuario"><br>
-					<input type="email" name="email" class="form-control" placeholder="Correo"><br>
-					<input type="password" class="form-control" name="password" placeholder="Contrase&ntilde;a"><br> 
-					<input type="password" class="form-control" placeholder="Repita Contrase&ntilde;a"><br>
+			<div id="msjRegistro"></div>
+			<form action="#" name="registro">
+				<div class="modal-body">
+					<input type="text" name="user" class="form-control" required="required" placeholder="Usuario"><br>
+					<input type="email" name="email" class="form-control" required="required" placeholder="Correo"><br>
+					<input type="password" class="form-control" name="password" required="required" placeholder="Contrase&ntilde;a"><br> 
+					<input type="password" class="form-control" name="newpassword" required="required" placeholder="Repita Contrase&ntilde;a"><br>
 					<div class="checkbox text-center">
 						<label>
-							<input type="checkbox">Acepto los terminos y condiciones del sitio
+							<input type="checkbox" id="acepto" value="0">Acepto los terminos de uso y condiciones del sitio
 						</label>
 					</div>
 					<input type="hidden" name="opt" value="register">
-				</form>
-			</div>
-			<div class="modal-footer" id="footer-registro">
-				<input type="submit" class="btn btn-primary" id="reg"
-					value="Registrarse">
-				<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-			</div>
+				</div>
+				<div class="modal-footer" id="footer-registro">
+					<input type="submit" class="btn btn-primary" id="reg" value="Registrarse">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+				</div>
+			</form>
 		</div>
 	</div>
 </div>

@@ -5,18 +5,22 @@ $base_dir = realpath ( dirname ( __FILE__ ) . $ds . '..' ) . $ds;
 require_once "{$base_dir}DataAccess{$ds}DataAccess.php";
 include "{$base_dir}Config{$ds}Constant.php";
 include "{$base_dir}dist{$ds}php{$ds}mailer{$ds}class.phpmailer.php";
-// error_reporting(0);
+//error_reporting(0);
 $opt = $_POST ['opt'];
 if ($opt === 'register') {
-	$usuario = DataAccess::getClass ( 'usuario' );
-	$usuario->usuario = $_POST ['user'];
-	$usuario->contrasena = md5 ( $_POST ['password'] );
-	$usuario->correo = $_POST ['email'];
-	$usuario->rol = 2;
-	$id = DataAccess::saveEntity ( $usuario );
-	if ($id > 0) {
-		$correoEncriptado = base64_encode(base64_encode($usuario->correo));
-		$mensaje = '
+	//$usuario = DataAccess::getClass ( 'usuario' );
+	$usuario = null;
+	$usuario = DataAccess::findObject ( 'usuario', "usuario = '" . $_POST ['user'] . "'" );
+	if ($usuario === null) {
+		$usuario = DataAccess::getClass('usuario');
+		$usuario->usuario = $_POST ['user'];
+		$usuario->contrasena = md5 ( $_POST ['password'] );
+		$usuario->correo = $_POST ['email'];
+		$usuario->rol = 2;
+		$id = DataAccess::saveEntity ( $usuario );
+		if ($id > 0) {
+			$correoEncriptado = base64_encode ( base64_encode ( $usuario->correo ) );
+			$mensaje = '
 			<!DOCTYPE html>
 				<html>
 					<head>
@@ -49,19 +53,45 @@ if ($opt === 'register') {
 						</div>
 					</body>
 				</html>';
-		$mail = new PHPMailer ();
-		$mail->Host = "marakiwis.cl";
-		$mail->From = "no-responder@marakiwis.cl";
-		$mail->FromName = 'Correo de Validación de Usuario';
-		$mail->Subject = "Validación de Correo Electronico Usuario: " . $_POST ['user'];
-		$mail->addAddress ( $_POST ['email'], $_POST ['user'] );
-		$mail->MsgHTML ( $mensaje );
-		if ($mail->Send ()) {
-			echo "<div class='alert alert-success col-xs-12 col-sm-12 col-md-12' role='alert'>Se ha generado su registro, a su correo le llegara un mail confirmando el registro.</div>";
+			$mail = new PHPMailer ();
+			$mail->Host = "marakiwis.cl";
+			$mail->From = "no-responder@marakiwis.cl";
+			$mail->FromName = 'Correo de Validación de Usuario';
+			$mail->Subject = "Validación de Correo Electronico Usuario: " . $_POST ['user'];
+			$mail->addAddress ( $_POST ['email'], $_POST ['user'] );
+			$mail->MsgHTML ( $mensaje );
+			if ($mail->Send ()) {
+				echo '1';
+			} else {
+				echo '2';
+			}
 		} else {
-			echo "<div class='alert alert-success col-xs-12 col-sm-12 col-md-12' role='alert'>Se ha generado su registro, pero nuestor gestor de correo ha fallado. En unos minutos lo contactaremos vía mail</div>";
+			echo '3';
 		}
-	} else {
-		echo "<div class='alert alert-danger col-xs-12 col-sm-12 col-md-12' role='alert'>No se ha podido generar su registro, favor de enviarnos un mensaje.</div>";
+	}else {
+		echo '4';
+	}
+} else if ($opt === 'logout') {
+	$_SESSION [SESSION_ID] = null;
+	$_SESSION [SESSION_USUARIO] = null;
+	$_SESSION [SESSION_CORREO] = null;
+	$_SESSION [SESSION_PASSWORD] = null;
+	$_SESSION [SESSION_ROL] = null;
+	session_destroy ();
+} else if ($opt === 'login'){
+	$usuario = DataAccess::findObject('usuario', "usuario = '" . $_POST['user'] . "'");
+	if ($usuario != null){
+		if ($usuario->contrasena === md5($_POST['pass'])){
+			$_SESSION [SESSION_ID] = $usuario->id;
+			$_SESSION [SESSION_USUARIO] = $usuario->usuario;
+			$_SESSION [SESSION_CORREO] = $usuario->correo;
+			$_SESSION [SESSION_PASSWORD] = $usuario->contrasena;
+			$_SESSION [SESSION_ROL] = $usuario->rol;
+			echo "<script>window.location.assign("/")</script>";
+		}else {
+			echo "<div class='alert alert-danger col-xs-12 col-sm-12 col-md-12' role='alert'>La contraseña ingresada no es la valida.</div>";
+		}
+	}else {
+		echo "<div class='alert alert-danger col-xs-12 col-sm-12 col-md-12' role='alert'>El nombre de usuario no existe.</div>";
 	}
 }

@@ -32,12 +32,6 @@
 </div>
 <!-- FIN SLIDER -->
 <br>
-<?php
-$str ="niko.avb@gmail.com";
-$encr = base64_encode(base64_encode($str));
-$desc = base64_decode(base64_decode($encr));
-echo "Encriptado : " . $encr . " descriptado: " . $desc; 
-?>
 <!-- PRIMER GRUPO -->
 <div class="container">
 	<div class="row">

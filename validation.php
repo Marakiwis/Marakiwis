@@ -1,7 +1,7 @@
 <?php include 'header.php'; ?>
 <?php
-
-$correoEncriptado = $_GET ['token'];
+$_GET ['token'] = 'asdadaad';
+$correoEncriptado = $_GET [''];
 if ($correoEncriptado) {
 	// Si trae algo por acá
 	$usuario = DataAccess::findObject ( 'usuario', "correo = '" . base64_decode ( base64_decode ( $correoEncriptado ) ) . "'" );
@@ -24,23 +24,23 @@ if ($correoEncriptado) {
 			<div class="jumbotron">
 				<h1>Cuenta validada!</h1>
 				<p>Su cuenta ya esta validada e iniciada, con esto ya puede comenzar
-					a visitar y generar su favoritos</p>
-				<p>
-					<a class="btn btn-primary btn-lg" href="/" role="button">Volver a
-						Inicio</a>
-				</p>
+					a visitar y generar su favoritos<br>En breves segundos te redireccionaremos a nuestro inicio para que empieces a
+					utilizar tu cuenta.</p>
 			</div>
 		</div>
 	</div>
 </div>
 <<script type="text/javascript">
-('#menuderecho').html("<p class=\"navbar-text navbar-right\">Has Ingresado Como <?php echo $_SESSION[SESSION_USUARIO]?></p>");
+function chao(){
+	window.location.assign("/")	
+}
+setTimeout ("chao()", 5000);
 </script>
 <?php
 	}
 } else {
 	// Si esta vacio cae acá
-	echo "chupalo";
+	header ( 'Location: /nothing-info.shtml' );
 }
 ?>
 <?php include 'footer.php'; ?>

@@ -82,7 +82,7 @@ require_once "{$base_dir}Config{$ds}Constant.php";
 								</form>
 							</ul>
 								<?php } else {?>
-									<p class="navbar-text navbar-right">Has Ingresado Como <?php echo $_SESSION[SESSION_USUARIO]?></p>
+									<p class="navbar-text navbar-right">Has Ingresado Como <?php echo $_SESSION[SESSION_USUARIO]?> <button type="button" id="logout" class="btn btn-link"><i class="fa fa-sign-out"></i> Cerrar Sesi&oacute;n</button></p>
 								<?php }?>
 								<?php } else { ?>
 							<ul class="nav navbar-nav navbar-right">
