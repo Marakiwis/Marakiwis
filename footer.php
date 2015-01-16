@@ -4,7 +4,7 @@
 			<div class="col-md-4 "></div>
 			<div class="col-md-4 social text-center">
 				<div align="center">
-					<img class="img-responsive" align="center" width="auto"
+					<img class="img-responsive" width="auto"
 						height="50%" src="/Marakiwis/dist/img/logo.png"> <br>
 					<p>2015 - <?php echo date("Y");?> &#169;</p>
 				</div>
@@ -28,17 +28,17 @@
 				<h4 class="modal-title" id="myModalLabel">Inicio Sesión</h4>
 			</div>
 			<div id="msgLogin"></div>
-			<div class="modal-body">
-				<form action="#" name="login">
+			<form action="#" name="login">
+				<div class="modal-body">
 					<input type="text" class="form-control" placeholder="Usuario" name="user"><br>
 					<input type="password" class="form-control" placeholder="Contrase&ntilde;a" name="pass">
 					<input type="hidden" name="opt" value="login">
-				</form>
-			</div>
-			<div class="modal-footer">
-				<input type="submit" class="btn btn-primary" id="log" value="Ingresar">
-				<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-			</div>
+				</div>
+				<div class="modal-footer">
+					<input type="submit" class="btn btn-primary" id="log" value="Ingresar">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+				</div>
+			</form>
 		</div>
 	</div>
 </div>

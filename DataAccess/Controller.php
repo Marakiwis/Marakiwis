@@ -87,7 +87,7 @@ if ($opt === 'register') {
 			$_SESSION [SESSION_CORREO] = $usuario->correo;
 			$_SESSION [SESSION_PASSWORD] = $usuario->contrasena;
 			$_SESSION [SESSION_ROL] = $usuario->rol;
-			echo "<script>window.location.assign("/")</script>";
+			echo "<script>window.location = '/';</script>";
 		}else {
 			echo "<div class='alert alert-danger col-xs-12 col-sm-12 col-md-12' role='alert'>La contraseña ingresada no es la valida.</div>";
 		}
