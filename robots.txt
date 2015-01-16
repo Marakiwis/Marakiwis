@@ -3,5 +3,6 @@ Disallow: /dist/
 Disallow: /DataBase/
 Disallow: /DataAccess/
 Disallow: /Config/
+Disallow: /cms/
 
 Sitemap: http://www.marakiwis.cl/sitemap.xml
