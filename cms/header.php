@@ -34,7 +34,7 @@ require_once "{$base_dir}Config{$ds}Constant.php";
 					class="icon-bar"></span> <span class="icon-bar"></span> <span
 					class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="/cms/"><i class="fa fa-wrench"></i> Marakiwis</a>
+			<a class="navbar-brand" href="/cms/"><span class="glyphicon glyphicon-off"></span> Marakiwis</a>
 		</div>
 		<div id="navbar" class="navbar-collapse collapse">
 			<ul class="nav navbar-nav navbar-right">
@@ -55,20 +55,18 @@ require_once "{$base_dir}Config{$ds}Constant.php";
 		<div class="col-sm-3 col-md-2 sidebar">
 			<ul class="nav nav-sidebar">
 				<li><a href="/cms/">Dashboard</a></li>
-				<li><a href="#">Reportes</a></li>
-				<li><a href="#">Visitas Total Producto</a></li>
-				<li><a href="#">Export</a></li>
 			</ul>
 			<ul class="nav nav-sidebar">
-				<li><a href="">Nav item</a></li>
-				<li><a href="">Nav item again</a></li>
-				<li><a href="">One more nav</a></li>
-				<li><a href="">Another nav item</a></li>
-				<li><a href="">More navigation</a></li>
+				<li><a href="/cms/add-woman/">Agregar Producto</a></li>
+				<li><a href="">Editar Producto</a></li>
+				<li><a href="">Dar de baja Producto</a></li>
 			</ul>
 			<ul class="nav nav-sidebar">
-				<li><a href="">Nav item again</a></li>
-				<li><a href="">One more nav</a></li>
-				<li><a href="">Another nav item</a></li>
+				<li><a href="">Categorias</a></li>
+				<li><a href="">Servicios</a></li>
+				<li><a href="">Sector</a></li>
 			</ul>
 		</div>
+	</div>
+</div>
+<br>

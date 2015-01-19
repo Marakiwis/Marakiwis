@@ -1,0 +1,8 @@
+RewriteEngine On
+RewriteRule ^view-woman/([a-zA-Z0-9_-]+)$ view-product.php?id=$1
+RewriteRule ^validation/(.*)$ validation.php?token=$1
+RewriteRule ^add-woman/$ add-product.php
+RewriteRule ^nothing-info.shtml$ no-existe.php [L,NC]
+RewriteRule ^sitemap.xml$ sitemap.php [L,NC]
+ErrorDocument 404 /nothing-info.shtml
+ErrorDocument 403 /nothing-info.shtml
