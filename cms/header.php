@@ -14,7 +14,7 @@ require_once "{$base_dir}Config{$ds}Constant.php";
 	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="description" content="">
 <meta name="author" content="Marakiwis">
-<link rel="icon" href="/Marakiwis/dist/img/favicon.png">
+<link rel="icon" href="/dist/img/favicon.png">
 
 <title>Marakiwis Chile</title>
 
